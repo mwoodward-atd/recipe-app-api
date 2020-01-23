@@ -3,10 +3,10 @@ version: '3'
 services:
   app:
     build:
-      context: ../
+      context: .
     command: sleep infinity
     volumes:
-      - ../:/code
+      - .:/code
       - ~/.gitconfig:/root/.gitconfig
       - ~/.ssh:/root/.ssh
     ports:
