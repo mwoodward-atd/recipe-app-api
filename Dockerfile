@@ -4,6 +4,8 @@ ENV PYTHONDONTWRITEBYTECODE 1
 RUN apt-get update && \
     apt-get -y install git procps postgresql-client
 RUN mkdir /code
+RUN mkdir /code/static
+RUN mkdir /code/media
 WORKDIR /code
 COPY requirements.txt /code
 RUN pip install --upgrade pip && \
